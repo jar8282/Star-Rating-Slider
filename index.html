@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Star Rating Slider</title>
+  <script src="assets/js/form.js"></script>
+  <script src="assets/js/rating.js"></script>
+  <link rel="stylesheet" href="assets/css/text.css">
+ </head>
+<body>
+<h2>Basic Star Rating Slider</h2>
+  <h4>Add a Comment</h4>
+  <form onsubmit="return checkForm()">
+    <label for='name'>Name:</label><br>
+    <input type='text' id='name' name='name'><br>
+
+    <label for='ratingInput'>Rating:</label><br>
+    <input type='range' step='0.5' max='5' value='1' id='ratingInput' name='rating' oninput="rangeStars()">
+    <output id="ratingOutput"></output><br>
+
+    <label for='comment'>Comment:</label><br>
+    <textarea id='comment' name='comment'></textarea><br>
+
+    <input type='submit' value='Submit'>
+  </form>
+  <h4>All Comments</h4>
+  <hr>
+  <div class='comment'>
+    <div class='top'>
+      <span><strong>Jarod</strong></span>
+      <span>2024-01-10</span>
+    </div>
+    <div class='rating'>5</div>
+    <p>Easy to make and easier to use!</p>
+  </div>
+  <hr>
+  <div class='comment'>
+    <div class='top'>
+      <span><strong>Kylie</strong></span>
+      <span>2023-11-14</span>
+    </div>
+    <div class='rating'>3</div>
+      <p>Just add the 'rating' class to an element containing a number 0 - 5</p>
+  </div>
+  <hr>
+  <div class='comment'>
+    <div class='top'>
+      <span><strong>Liam</strong></span>
+      <span>2023-08-06</span>
+    </div>
+    <div class='rating'>2.5</div>
+      <p>You can also use 0.5 - 4.5 for half stars!</p>
+  </div>
+  <hr>
+  <div class='comment'>
+    <div class='top'>
+      <span><strong>Larry</strong></span>
+      <span>2023-04-26</span>
+    </div>
+    <div class='rating'>0.5</div>
+      <p>This comment form doesn't actually work</p>
+  </div>
+</body>
+</html>
